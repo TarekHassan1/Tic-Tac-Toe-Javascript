@@ -125,7 +125,7 @@ function computerPlay() {
 
                 player = "X";
                 playOrder.textContent = player;
-                
+                checkWinner(squares)
             }, 500);
             return () => clearTimeout(time);
 
