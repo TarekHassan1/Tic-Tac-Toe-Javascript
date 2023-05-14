@@ -31,7 +31,7 @@ choose.forEach(e => {
         } else {
             AgainstComputer = true;
         }
-        gameContainer.classList.add("working")
+        gameContainer.classList.remove("disabled")
         setTimeout(() => {
             e.classList.remove("scale");
             setTimeout(() => {
@@ -102,6 +102,7 @@ function checkWinner(squares) {
                 document.querySelector(selector).classList.add("reveal");
             }
             result.textContent = `Winner : ${squares[a]}`;
+           restart.parentElement.classList.remove("disabled")
             return squares[a];
         }
     }
@@ -126,7 +127,6 @@ function computerPlay() {
                 playOrder.textContent = player;
                 
             }, 500);
-
             return () => clearTimeout(time);
 
         }
