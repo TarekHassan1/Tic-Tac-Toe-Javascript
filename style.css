@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tic {
+    width: 300px;
+    background-color: blueviolet;
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.tic .board-row {
+    position: relative;
+    display: flex;
+}
+
+.tic .board-row>div:not(.vertical, .diagonal, .horizontal) {
+    width: 100px;
+    height: 100px;
+    background: #EEE;
+
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 2.5;
+    border: 1px solid gray;
+    cursor: pointer;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.horizontal-1,
+.horizontal-2,
+.horizontal-3 {
+    height: 3px;
+    width: 0px;
+}
+
+.vertical-1,
+.vertical-2,
+.vertical-3,
+.horizontal-1,
+.horizontal-2,
+.horizontal-3,
+.diagonal-1,
+.diagonal-2 {
+    position: absolute;
+    background-color: red;
+    z-index: 1;
+    transition: 0.8s all ease-in-out;
+}
+
+.horizontal-1,
+.horizontal-2,
+.horizontal-3 {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+.reveal {
+    width: 100%;
+    height: 3px;
+}
+
+.vertical-1,
+.vertical-2,
+.vertical-3 {
+
+    height: 0;
+    width: 3px;
+
+}
+
+.reveal-2 {
+    height: 300%;
+}
+
+.vertical-1 {
+    left: 15%;
+    top: 150%;
+    transform: translateY(-50%);
+}
+
+.vertical-2 {
+    left: 49%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.vertical-3 {
+    left: 83%;
+    top: -50%;
+    transform: translateY(-50%);
+}
+
+.diagonal-1,
+.diagonal-2 {
+    height: 0px;
+    width: 3px;
+}
+
+.diagonal-1 {
+    transform: rotate(45deg) translateY(-49%);
+    left: 2%;
+    top: 88%;
+    margin-left: 65%;
+}
+
+.diagonal-2 {
+    transform: rotate(-45deg) translateY(-52%);
+    left: 100%;
+    top: -105%;
+    margin-left: -65%;
+}
+
+.reveal-3 {
+    height: 410px;
+    margin-left: 0;
+}
