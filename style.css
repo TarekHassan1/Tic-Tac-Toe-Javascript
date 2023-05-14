@@ -126,3 +126,37 @@ footer {
     height: 410px;
     margin-left: 0;
 }
+.choose{
+    margin-top: 2rem;
+    text-align: center;
+}
+.choose button,.restart button{
+border: 0;
+background-color: #042f66;
+padding: 20px 15px;
+cursor: pointer;
+color: rgb(230, 225, 225);
+transition: 0.4s ;
+font-weight: bold;
+}
+.restart{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+.restart button{
+    font-size: 1.2rem;
+    width: 275px;
+}
+.scale{
+    transform: scale(0.89);
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+   
+}
+.working{
+pointer-events:all;
+opacity: 1;
+}
